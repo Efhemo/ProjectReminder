@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="com.efhems.newinsideproject">
+
+    <uses-permission android:name="android.permission.RECORD_AUDIO" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+
+    <application
+        android:name=".ui.notification.NotificationChan"
+        android:allowBackup="true"
+        android:icon="@drawable/projectreminder_logo"
+        android:label="@string/app_name"
+        android:roundIcon="@drawable/projectreminder_logo"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme"
+        tools:ignore="GoogleAppIndexingWarning">
+        <activity android:name=".ui.activities.CloudStorageActivity" />
+        <activity
+            android:name=".ui.activities.addTask.AddTaskActivity"
+            android:parentActivityName=".ui.activities.task.TaskActivity" />
+        <activity
+            android:name=".ui.activities.main.MainActivity"
+            android:theme="@style/MyTheme.">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".ui.activities.projectList.MyProjectActivity"
+            android:launchMode="singleTop"
+            android:parentActivityName=".ui.activities.main.MainActivity" />
+        <activity
+            android:name=".ui.activities.task.TaskActivity"
+            android:parentActivityName=".ui.activities.projectList.MyProjectActivity" />
+
+        <receiver android:name=".ui.notification.AlertReceiver" /> <!-- receiver for widget -->
+        <receiver
+            android:name=".ui.widget.ProjectReminderAppWidgetProvider"
+            android:icon="@drawable/projectreminder_logo">
+            <intent-filter>
+                <action android:name="android.appwidget.action.APPWIDGET_UPDATE" />
+            </intent-filter>
+
+            <meta-data
+                android:name="android.appwidget.provider"
+                android:resource="@xml/project_reminder_widget_info" />
+        </receiver>
+
+        <service android:name=".ui.widget.UpdateService" />
+        <service
+            android:name=".ui.widget.WidgetService"
+            android:permission="android.permission.BIND_REMOTEVIEWS" />
+    </application>
+
+</manifest>

@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:padding="@dimen/dimen_8">
+
+    <TextView
+        android:padding="@dimen/dimen_4"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:id="@+id/header"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        android:text="@string/get_notified_before"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    <RadioGroup
+        android:layout_marginTop="@dimen/dimen_4"
+        android:id="@+id/radio_group"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/header">
+
+        <RadioButton
+            android:padding="@dimen/dimen_4"
+            android:id="@+id/rb_five_minute"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/_5_minute"
+            android:textSize="@dimen/text_size_16" />
+
+        <RadioButton
+            android:padding="@dimen/dimen_4"
+            android:id="@+id/rb_ten_minute"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/_10_minute" />
+
+        <RadioButton
+            android:padding="@dimen/dimen_4"
+            android:id="@+id/rb_fifteen_minute"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/_15_minute" />
+
+        <RadioButton
+            android:padding="@dimen/dimen_4"
+            android:id="@+id/rb_twenty_minute"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/_20_minute" />
+
+    </RadioGroup>
+
+</android.support.constraint.ConstraintLayout>

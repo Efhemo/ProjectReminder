@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="@dimen/dimen_12"
+    android:background="@drawable/border_layer_list"
+    android:padding="@dimen/dimen_12">
+
+    <TextView
+        android:id="@+id/cap_project"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/circular_border_red"
+        android:gravity="center"
+        tools:text="M"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:textColor="@android:color/white"
+        android:textStyle="bold"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/name_Project"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/dimen_20"
+        tools:text="Modupe ezenne"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:textColor="@android:color/black"
+        app:layout_constraintBottom_toBottomOf="@id/cap_project"
+        app:layout_constraintLeft_toRightOf="@id/cap_project"
+        app:layout_constraintTop_toTopOf="@id/cap_project" />
+
+    <TextView
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        tools:text="helium"
+        android:id="@+id/name_task"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/dimen_12"
+        android:numStars="5"
+        android:stepSize="0.1"
+        app:layout_constraintLeft_toLeftOf="@id/cap_project"
+        app:layout_constraintTop_toBottomOf="@id/cap_project"
+        tools:rating="4.4" />
+
+
+    <TextView
+        android:id="@+id/task_description"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/dimen_12"
+        tools:text="Et blanditiis sit consectetur et laboriosam similique. Rerum impedit delectus deleniti ipsa."
+        app:layout_constraintLeft_toLeftOf="@id/name_task"
+        app:layout_constraintTop_toBottomOf="@id/name_task" />
+</android.support.constraint.ConstraintLayout>

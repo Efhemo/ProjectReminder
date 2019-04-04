@@ -1,0 +1,40 @@
+<resources>
+    <string name="app_name" translatable="false">NewInsideProject</string>
+    <string name="save_btn">Save</string>
+    <string name="delete_btn">Delete</string>
+    <string name="description">Description</string>
+    <string name="select_to_notify">Select to notify</string>
+    <string name="update">Update</string>
+    <string name="update_task">Update Task</string>
+    <string name="add_task">Add Task</string>
+    <string name="channel_description">Get notification when you set notification for a task.</string>
+    <string name="channel_name">Tasks Reminder</string>
+    <string name="project_name">Project Name</string>
+    <string name="project_description">Project Description</string>
+    <string name="next">Next</string>
+    <string name="title">Title</string>
+    <string name="_1">1</string>
+    <string name="_2">2</string>
+    <string name="_3">3</string>
+    <string name="sign_in">Sign in</string>
+    <string name="push_to_cloud">Push to Cloud</string>
+    <string name="delete">Delete</string>
+    <string name="remote_task">Remote Task</string>
+    <string name="get_notified_before">Get notified before:</string>
+    <string name="_5_minute">5 Minute</string>
+    <string name="_20_minute">20 Minute</string>
+    <string name="_15_minute">15 Minute</string>
+    <string name="_10_minute">10 Minute</string>
+    <string name="tasks">Tasks</string>
+    <string name="record_started">Recording Has Started</string>
+    <string name="record_stop">Recording Stopped</string>
+    <string name="play">Playing</string>
+    <string name="invalid_project_name">Invalid Project Name</string>
+    <string name="invalid_project_description">Invalid Project Description</string>
+    <string name="auth_fail">Authentication Failed.</string>
+    <string name="something_wrong">something went wrong</string>
+    <string name="my_project">My projects</string>
+    <string name="you_need_to_sign_in">You need to sign in first</string>
+    <string name="project_reminder">Project Reminder</string>
+
+</resources>

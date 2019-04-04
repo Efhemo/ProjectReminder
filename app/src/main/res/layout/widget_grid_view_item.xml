@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="horizontal"
+    android:id="@+id/item_wrapper">
+
+
+    <TextView
+        android:id="@+id/tv_header"
+        android:layout_width="@dimen/dimen_67dp"
+        android:layout_height="@dimen/dimen_68dp"
+        android:layout_margin="@dimen/dimen_12"
+        android:background="@color/colorPrimaryDark"
+        tools:text="H"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:textColor="@color/textColorPrimaryInverse"
+        android:textSize="@dimen/text_size_36"
+        android:gravity="center"/>
+
+    <TextView
+        android:layout_marginEnd="@dimen/dimen_4"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:id="@+id/tv_projectName"
+        android:layout_margin="@dimen/dimen_4"
+        android:textStyle="bold"
+        tools:text="Firebase"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+</LinearLayout>

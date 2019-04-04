@@ -1,0 +1,177 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v4.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="@dimen/dimen_8"
+    android:background="@color/colorPrimaryDark">
+
+    <android.support.constraint.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/dimen_8"
+
+        tools:context=".ui.activities.main.MainActivity">
+
+        <ImageView
+            android:id="@+id/logo_img"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/dimen_24"
+            android:layout_marginTop="@dimen/dimen_50"
+            android:src="@drawable/project_reminder_id"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+
+            android:textStyle="bold"
+            android:id="@+id/project_label"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/dimen_18"
+            android:text="@string/project_reminder"
+            android:textColor="@color/textColorPrimaryInverse"
+            android:textSize="@dimen/text_size_16"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            app:layout_constraintLeft_toRightOf="@id/logo_img"
+            app:layout_constraintTop_toTopOf="@id/logo_img" />
+
+        <TextView
+            android:layout_marginTop="@dimen/dimen_4"
+            android:id="@+id/user_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            tools:text="femi"
+            android:textColor="@color/textColorPrimaryInverse"
+            android:textSize="@dimen/text_size_16"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            app:layout_constraintLeft_toLeftOf="@id/project_label"
+            app:layout_constraintTop_toBottomOf="@id/project_label"
+            app:layout_constraintBottom_toBottomOf="@id/logo_img"/>
+
+        <LinearLayout
+            android:id="@+id/my_projects_container"
+            android:layout_width="@dimen/width"
+            android:layout_height="@dimen/height"
+            android:layout_marginStart="@dimen/dimen_30"
+            android:layout_marginTop="@dimen/dimen_50"
+            android:background="@drawable/white_border"
+            android:gravity="center_vertical"
+            android:orientation="vertical"
+            app:layout_constraintRight_toLeftOf="@id/new_projects_container"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/logo_img">
+
+            <ImageView
+                android:layout_width="@dimen/dimen_50"
+                android:layout_height="@dimen/dimen_50"
+                android:layout_marginStart="@dimen/dimen_8"
+                android:layout_marginTop="@dimen/dimen_8"
+                android:src="@drawable/ic_view_list" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/dimen_14"
+                android:layout_marginTop="@dimen/dimen_8"
+                android:text="My Project"
+                android:textColor="@color/textColorPrimaryInverse"
+                android:textSize="@dimen/text_size_16" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/new_projects_container"
+            android:layout_width="@dimen/width"
+            android:layout_height="@dimen/height"
+            android:layout_marginStart="@dimen/dimen_30"
+            android:layout_marginEnd="@dimen/dimen_30"
+            android:background="@drawable/white_border"
+            android:gravity="center_vertical"
+            android:orientation="vertical"
+            app:layout_constraintLeft_toRightOf="@id/my_projects_container"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="@id/my_projects_container">
+
+            <ImageView
+                android:layout_width="@dimen/dimen_50"
+                android:layout_height="@dimen/dimen_50"
+                android:layout_marginStart="@dimen/dimen_8"
+                android:layout_marginTop="@dimen/dimen_8"
+                android:src="@drawable/ic_add" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/dimen_14"
+                android:layout_marginTop="@dimen/dimen_8"
+                android:text="New Project"
+                android:textColor="@color/textColorPrimaryInverse"
+                android:textSize="@dimen/text_size_16" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/settings_container"
+            android:layout_width="@dimen/width"
+            android:layout_height="@dimen/height"
+            android:layout_marginTop="@dimen/dimen_30"
+            android:background="@drawable/white_border"
+            android:gravity="center_vertical"
+            android:orientation="vertical"
+            app:layout_constraintLeft_toLeftOf="@id/my_projects_container"
+            app:layout_constraintRight_toRightOf="@id/my_projects_container"
+            app:layout_constraintTop_toBottomOf="@id/my_projects_container">
+
+            <ImageView
+                android:layout_width="@dimen/dimen_50"
+                android:layout_height="@dimen/dimen_50"
+                android:layout_marginStart="@dimen/dimen_8"
+                android:layout_marginTop="@dimen/dimen_8"
+                android:src="@drawable/ic_settings" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/dimen_14"
+                android:layout_marginTop="@dimen/dimen_8"
+                android:text="My Settings"
+                android:textColor="@color/textColorPrimaryInverse"
+                android:textSize="@dimen/text_size_16" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/auth_container"
+            android:layout_width="@dimen/width"
+            android:layout_height="@dimen/height"
+            android:layout_marginStart="@dimen/dimen_30"
+            android:layout_marginEnd="@dimen/dimen_30"
+            android:background="@drawable/white_border"
+            android:gravity="center_vertical"
+            android:orientation="vertical"
+            app:layout_constraintLeft_toRightOf="@id/settings_container"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="@id/settings_container">
+
+            <ImageView
+                android:id="@+id/logo"
+                android:layout_gravity="center_horizontal"
+                android:layout_width="@dimen/dimen_50"
+                android:layout_height="@dimen/dimen_50"
+                android:layout_marginTop="@dimen/dimen_8"
+                android:src="@drawable/google_icon" />
+
+            <TextView
+                android:id="@+id/login"
+                android:layout_gravity="center_horizontal"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dimen_8"
+                android:text="@string/sign_in"
+                android:textColor="@color/textColorPrimaryInverse"
+                android:textSize="@dimen/text_size_16" />
+        </LinearLayout>
+
+    </android.support.constraint.ConstraintLayout>
+
+</android.support.v4.widget.NestedScrollView>
