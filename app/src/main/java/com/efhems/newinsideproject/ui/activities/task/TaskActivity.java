@@ -124,17 +124,17 @@ public class TaskActivity extends AppCompatActivity implements TasksReminderRecy
 
     private void closeOnError() {
         finish();
-        Toast.makeText(this, "Close on error", Toast.LENGTH_SHORT).show();
+        Toast.makeText(this, R.string.close_on_error, Toast.LENGTH_SHORT).show();
     }
 
     private void writeTaskToFirebase(Task task) {
 
         if (user.getEmail() == null) {
-            Toast.makeText(this, "You need to sign in", Toast.LENGTH_SHORT).show();
+            Toast.makeText(this, getString(R.string.you_need_to_sign_in), Toast.LENGTH_SHORT).show();
         } else {
             mDBReference.child(user.getDisplayName() + " " + user.getUid()).child(currentProject.getNameOfProject())
                     .child(task.getId() + "").setValue(task);
-            Toast.makeText(this, "save", Toast.LENGTH_SHORT).show();
+            Toast.makeText(this, getString(R.string.save_btn), Toast.LENGTH_SHORT).show();
 
         }
     }

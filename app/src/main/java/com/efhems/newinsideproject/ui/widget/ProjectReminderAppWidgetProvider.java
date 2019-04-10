@@ -70,7 +70,7 @@ public class ProjectReminderAppWidgetProvider extends AppWidgetProvider {
 
         final String action = intent.getAction();
 
-        if (action.equals("android.appwidget.action.APPWIDGET_UPDATE")) {
+        if (action.equals(context.getString(R.string.app_widget_update))) {
             projectList = intent.getExtras().getParcelableArrayList(FROM_ACTIVITY_PROJECT_LIST);
             appWidgetManager.notifyAppWidgetViewDataChanged(appWidgetIds, R.id.widget_grid_view);
             //Now update all widgets

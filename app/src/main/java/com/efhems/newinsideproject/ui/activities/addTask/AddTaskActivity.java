@@ -255,7 +255,7 @@ public class AddTaskActivity extends AppCompatActivity implements View.OnClickLi
         String taskDescText = taskDesc.getText().toString();
 
         if (taskTitleText.isEmpty()) {
-            Snackbar.make(addTaskContainer, "Title is empty", Snackbar.LENGTH_SHORT).show();
+            Snackbar.make(addTaskContainer, R.string.title_is_empty, Snackbar.LENGTH_SHORT).show();
             return;
         }
 
@@ -532,7 +532,7 @@ public class AddTaskActivity extends AppCompatActivity implements View.OnClickLi
         v.onTouchEvent(event);
         // We're only interested in when the button is just pressed Down.
         if (event.getAction() == MotionEvent.ACTION_DOWN) {
-            showToast(v, "Hold To Record Release to Save");
+            showToast(v, getString(R.string.hold_to_record));
         } else if (event.getAction() == MotionEvent.ACTION_UP) {
             // We're only interested in anything if our speak button is currently pressed.
             if (isSButtonLongPressed) {

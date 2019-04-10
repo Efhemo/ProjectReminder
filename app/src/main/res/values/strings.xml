@@ -36,5 +36,12 @@
     <string name="my_project">My projects</string>
     <string name="you_need_to_sign_in">You need to sign in first</string>
     <string name="project_reminder">Project Reminder</string>
+    <string name="recording">Recording</string>
+    <string name="new_project">New Project</string>
+    <string name="my_settings">My Settings</string>
+    <string name="close_on_error">Close on error</string>
+    <string name="title_is_empty">Title is empty</string>
+    <string name="hold_to_record">Hold To Record Release to Save</string>
+    <string name="app_widget_update">android.appwidget.action.APPWIDGET_UPDATE</string>
 
 </resources>

@@ -4,6 +4,7 @@ import android.app.IntentService;
 import android.content.Context;
 import android.content.Intent;
 
+import com.efhems.newinsideproject.R;
 import com.efhems.newinsideproject.data.local.entities.Project;
 
 import java.util.ArrayList;
@@ -33,8 +34,8 @@ public class UpdateService extends IntentService {
 
     /*reciever*/
     private void handleActionUpdateProjectWidgets(ArrayList<Project> fromActivityProjectsList) {
-        Intent intent = new Intent("android.appwidget.action.APPWIDGET_UPDATE");
-        intent.setAction("android.appwidget.action.APPWIDGET_UPDATE");
+        Intent intent = new Intent(getString(R.string.app_widget_update));
+        intent.setAction(getString(R.string.app_widget_update));
         intent.putExtra(FROM_ACTIVITY_PROJECT_LIST,fromActivityProjectsList);
         sendBroadcast(intent);
     }
