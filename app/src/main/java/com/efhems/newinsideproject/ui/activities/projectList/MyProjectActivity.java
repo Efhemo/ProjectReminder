@@ -113,6 +113,8 @@ public class MyProjectActivity extends AppCompatActivity implements MyProjectRec
                     }
                 });
             }
+
+
         }).attachToRecyclerView(projectRecyclerView);
     }
 
